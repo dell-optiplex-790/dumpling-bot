@@ -1,0 +1,1 @@
+(function(args, user){send('Home: '+user.home)})

@@ -1,0 +1,3 @@
+(function(user, args) {
+	reloadConfig()
+})

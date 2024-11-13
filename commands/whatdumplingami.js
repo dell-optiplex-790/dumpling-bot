@@ -1,0 +1,1 @@
+(function(args, user){send('well im a strawberry dumpling, that\'s why im pink')})
