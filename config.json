@@ -1,0 +1,10 @@
+{
+	"bot": {
+		"name": "Dumpling",
+		"color": "pink"
+	},
+	"admins": [
+		"48dd8c3741c3b8490056e7a6a66e6ad33e9a2147794ee0e3ebca2010c9d44dfa"
+	],
+	"prefix": "d!"
+}
