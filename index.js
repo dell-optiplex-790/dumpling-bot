@@ -32,7 +32,11 @@ var botID = UID[0] + UID[4] + UID[5] + UID[2] + UID[7]
 
 function reloadConfig(){
 	config=JSON.parse(fs.readFileSync('config.json').toString());
-	socket.emit('user joined', `${config.prefix}${config.bot.name}`, config.bot.color, '', '')
+	if(!config.nameLayout) {
+		socket.emit('user joined', `${config.prefix}${config.bot.name}`, config.bot.color, '', '')
+	} else {
+		socket.emit('user joined', config.nameLayout.replaceAll('name', config.bot.name).replaceAll('prefix', config.prefix), config.bot.color, '', '')
+	}
 }
 reloadConfig()
 
