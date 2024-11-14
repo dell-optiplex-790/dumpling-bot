@@ -48,7 +48,17 @@ function send(e) {
 	socket.send('\u200B'.repeat(Math.round(Math.random() * 10)) + he.decode(e))
 }
 socket.on('message', (data) => {	
+	if(config.bans.includes(data.home)) {
+		if(data.msg.toLowerCase().includes('no u')) {
+			send('Don\'t "no u" me. You deserved that ban.')
+			return
+		}
+	}
 	if(data.msg.startsWith(config.prefix)) {
+		if(config.bans.includes(data.home)) {
+			send(`${he.decode(data.nick)}, go to hell`)
+			return
+		}
 		var cmd = he.decode(data.msg).split(' ')[0].slice(config.prefix.length)
 		if(fs.existsSync(`commands/${cmd}.js`)) {
 			try {
