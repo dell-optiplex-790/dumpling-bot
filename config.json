@@ -6,9 +6,6 @@
 	"admins": [
 		"48dd8c3741c3b8490056e7a6a66e6ad33e9a2147794ee0e3ebca2010c9d44dfa"
 	],
-	"bans": [
-		"a171a683f6bd4d846b08d265e9acd02a303c493423226734359e8de8ed6f6253",
-		"91b10374fc14ec4f400b86cf06dbda816dad19ec36a02b2c4ca31c28333dd642"
-	],
+	"bans": [],
 	"prefix": "d!"
 }
